@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Crusher Owners Survival Guide - RAKANTHAM CRUSHER SOLUTION</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #d32f2f;
+      --primary-dark: #b71c1c;
+      --secondary: #1565c0;
+      --secondary-dark: #0d47a1;
+      --accent: #ff9800;
+      --light: #f5f7fa;
+      --dark: #1a1a1a;
+      --success: #2e7d32;
+      --warning: #f57c00;
+      --danger: #d32f2f;
+      --gray: #6c757d;
+      --white: #ffffff;
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+      --radius: 12px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: var(--light);
+      overflow-x: hidden;
+    }
+
+    /* --- LANGUAGE TOGGLE STYLES --- */
+    .lang-toggle-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1100;
+        background: white;
+        padding: 5px 15px;
+        border-radius: 50px;
+        box-shadow: var(--shadow-lg);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid var(--primary);
+    }
+
+    .lang-label {
+        font-weight: bold;
+        font-size: 0.9em;
+        color: var(--primary);
+        cursor: pointer;
+    }
+
+    /* Toggle Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px var(--primary);
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Translation Logic */
+    .hi-text { display: none; }
+    
+    body.hindi-mode .en-text { display: none !important; }
+    body.hindi-mode .hi-text { display: inline-block; }
+    body.hindi-mode div.hi-text, 
+    body.hindi-mode p.hi-text, 
+    body.hindi-mode h1.hi-text, 
+    body.hindi-mode h2.hi-text, 
+    body.hindi-mode h3.hi-text, 
+    body.hindi-mode h4.hi-text, 
+    body.hindi-mode li.hi-text { display: block; }
+    
+    /* -------------------------- */
+
+    .app-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Header Styles */
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 25px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+      z-index: 0;
+    }
+
+    /* NEW FLEX HEADER STYLES */
+    .header-content-wrapper {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .header-logo-box {
+      flex-shrink: 0;
+    }
+
+    .company-logo-img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      background: white;
+      padding: 10px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .header-text-box {
+      flex-grow: 1;
+    }
+
+    .header h1 {
+      font-size: 2.2em;
+      margin-bottom: 5px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      line-height: 1.2;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: flex-start; /* Left align on desktop */
+      gap: 30px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95em;
+    }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+      font-weight: 500;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .company-details {
+      margin-top: 10px;
+      display: flex;
+      justify-content: flex-start; /* Left align on desktop */
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .detail-item {
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+
+    /* Navigation Styles */
+    .nav-container {
+      background: var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .nav-scroll {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .nav-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: var(--transition);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .nav-btn:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .nav-btn.active {
+      background: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 25px;
+    }
+
+    .section {
+      background: white;
+      margin: 25px 0;
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: none;
+      animation: fadeIn 0.5s;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section h2 {
+      color: var(--primary);
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 i {
+      font-size: 1.2em;
+    }
+
+    .section h3 {
+      color: var(--secondary);
+      font-size: 1.4em;
+      margin: 20px 0 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Card Styles */
+    .card {
+      background: #f8f9fa;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      border-left: 5px solid var(--secondary);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .card.danger {
+      border-left-color: var(--danger);
+      background: #ffebee;
+    }
+
+    .card.success {
+      border-left-color: var(--success);
+      background: #e8f5e9;
+    }
+
+    .card.warning {
+      border-left-color: var(--warning);
+      background: #fff3e0;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-header i {
+      font-size: 1.3em;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    table th {
+      background: var(--secondary);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    table tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    table tr:hover {
+      background: #e3f2fd;
+    }
+
+    /* Checklist Styles */
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      margin: 8px 0;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .checklist-item:hover {
+      background: #e9ecef;
+    }
+
+    .checklist-item input[type="checkbox"] {
+      margin-right: 15px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: var(--secondary);
+    }
+
+    .checklist-item label {
+      cursor: pointer;
+      flex: 1;
+    }
+
+    /* Button Styles */
+    .print-btn {
+      background: var(--secondary);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1em;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .print-btn:hover {
+      background: var(--secondary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Check Loss Button */
+    .check-loss-btn {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 25px auto;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+    }
+
+    .check-loss-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
+    }
+
+    /* ROI Calculator Styles */
+    .roi-calculator {
+      background: linear-gradient(135deg, #f5f7fa 0, #e3f2fd 100);
+      padding: 25px;
+      border-radius: var(--radius);
+      margin: 20px 0;
+    }
+
+    .calculator-inputs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1em;
+      border: 2px solid var(--secondary);
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .input-group input:focus, .input-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.1);
+    }
+
+    .calculator-results {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .result-card {
+      background: linear-gradient(135deg, var(--primary) 0, var(--primary-dark) 100%);
+      color: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s;
+    }
+
+    .result-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .result-card.severe {
+      background: linear-gradient(135deg, var(--primary-dark) 0, #7f0000 100%);
+    }
+
+    .result-card h4 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      opacity: 0.95;
+    }
+
+    .result-card .amount {
+      font-size: 2.2em;
+      font-weight: bold;
+      margin: 10px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .result-card .hours {
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    .whatsapp-roi-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .whatsapp-roi-btn:hover {
+      background: #20ba5a;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+      color: white;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    .footer h3 {
+      margin-bottom: 15px;
+      color: var(--white);
+    }
+
+    .footer p {
+      margin: 10px 0;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #32b8c6;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-link:hover {
+      color: #25D366;
+    }
+
+    .footer-details {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .footer-detail {
+      font-size: 0.9em;
+      opacity: 0.9;
+    }
+
+    /* Floating Action Button */
+    .fab-container {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+    }
+
+    .fab {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .fab-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .fab-whatsapp {
+      background: #25D366;
+      color: white;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      }
+      50% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+      }
+    }
+
+    .fab:hover {
+      transform: scale(1.1);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 1.6em;
+      }
+      
+      .lang-toggle-container {
+        top: auto;
+        /* UPDATED: Changed from 100px to 180px so it sits above WhatsApp button */
+        bottom: 180px; 
+        right: 20px;
+      }
+
+      /* UPDATED: Mobile Header Layout */
+      .header-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .contact-info, .company-details {
+        justify-content: center; /* Center align on mobile */
+      }
+      
+      .nav-btn {
+        padding: 12px 15px;
+        font-size: 0.85em;
+      }
+      
+      .section {
+        padding: 20px;
+      }
+      
+      .section h2 {
+        font-size: 1.5em;
+      }
+      
+      .company-logo-img {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .calculator-inputs,
+      .calculator-results {
+        grid-template-columns: 1fr;
+      }
+      
+      .result-card .amount {
+        font-size: 1.8em;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .footer-details {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .check-loss-btn {
+        padding: 14px 24px;
+        font-size: 1.1em;
+      }
+    }
+
+    @media print {
+      .nav-container,
+      .print-btn,
+      .fab-container,
+      .lang-toggle-container {
+        display: none;
+      }
+      
+      .section {
+        display: block !important;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    
+  <div class="lang-toggle-container">
+    <span class="lang-label">ENG</span>
+    <label class="switch">
+      <input type="checkbox" id="langToggle" onchange="toggleLanguage()">
+      <span class="slider"></span>
+    </label>
+    <span class="lang-label">हिंदी</span>
+  </div>
+
+  <div class="app-container">
+    <header class="header">
+      <div class="header-content-wrapper">
+        
+        <div class="header-logo-box">
+          <img src="Logo.png" alt="Company Logo" class="company-logo-img">
+        </div>
+
+        <div class="header-text-box">
+          <h1>RAKANTHAM CRUSHER SOLUTION</h1>
+          
+          <h2 style="font-size: 1.4em; margin-bottom: 5px; color: #ffecb3;">
+            <span class="en-text">The Crusher Owners Survival Guide</span>
+            <span class="hi-text">क्रशर मालिकों के लिए सर्वाइवल गाइड</span>
+          </h2>
+          
+          <p style="font-size: 1em; opacity: 0.9;">
+            <span class="en-text">ENGINEERED FOR PERFORMANCE | Complete Maintenance Manual</span>
+            <span class="hi-text">बेहतरीन परफॉरमेंस के लिए निर्मित | रखरखाव मैनुअल</span>
+          </p>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:rakanthamcrushersolutions@gmail.com">rakanthamcrushersolutions@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+918923880893">+91 89238 80893</a>
+            </div>
+          </div>
+
+          <div class="company-details">
+            <div class="detail-item">
+              <i class="fas fa-file-invoice"></i> <strong>GST:</strong> 06FTFPS5696B1ZA
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-map-marker-alt"></i> <strong><span class="en-text">Address:</span><span class="hi-text">पता:</span></strong> Unit No. 260 LNT Co-Working Solution, Faridabad
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <nav class="nav-container">
+      <div class="nav-scroll">
+        <button class="nav-btn active" onclick="showSection('overview')">
+          <i class="fas fa-home"></i> 
+          <span class="en-text">Overview</span>
+          <span class="hi-text">ओवरव्यू (Overview)</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('jaw')">
+          <i class="fas fa-cog"></i> 
+          <span class="en-text">Jaw Crusher</span>
+          <span class="hi-text">Jaw Crusher</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('cone')">
+          <i class="fas fa-cogs"></i> 
+          <span class="en-text">Cone Crusher</span>
+          <span class="hi-text">Cone Crusher</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('vsi')">
+          <i class="fas fa-industry"></i> 
+          <span class="en-text">VSI Crusher</span>
+          <span class="hi-text">VSI Crusher</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('maintenance')">
+          <i class="fas fa-tools"></i> 
+          <span class="en-text">Maintenance</span>
+          <span class="hi-text">रखरखाव (Maintenance)</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('troubleshoot')">
+          <i class="fas fa-wrench"></i> 
+          <span class="en-text">Troubleshoot</span>
+          <span class="hi-text">समस्या निवारण</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('roi')">
+          <i class="fas fa-calculator"></i> 
+          <span class="en-text">ROI Calculator</span>
+          <span class="hi-text">मुनाफा कैलकुलेटर</span>
+        </button>
+        <button class="nav-btn" onclick="showSection('contact')">
+          <i class="fas fa-address-book"></i> 
+          <span class="en-text">Contact Us</span>
+          <span class="hi-text">संपर्क करें</span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <section id="overview" class="section active">
+        <h2><i class="fas fa-home"></i> 
+            <span class="en-text">Overview - Crusher Maintenance</span>
+            <span class="hi-text">जानकारी - क्रशर रखरखाव</span>
+        </h2>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>
+                <span class="en-text">Main Problems</span>
+                <span class="hi-text">मुख्य समस्याएं</span>
+            </h3>
+          </div>
+          <ul class="en-text">
+            <li><strong>Improper Maintenance</strong> - Weak maintenance, not servicing on time</li>
+            <li><strong>Wrong Feed Material</strong> - Incorrect size, type, material</li>
+            <li><strong>Overloading</strong> - Loading beyond capacity</li>
+            <li><strong>Poor Lubrication</strong> - Wrong grade of oil/grease</li>
+            <li><strong>Worn Parts Not Replaced</strong> - Parts not changed on time</li>
+          </ul>
+          <ul class="hi-text">
+            <li><strong>गलत रखरखाव (Improper Maintenance)</strong> - कमजोर रखरखाव, समय पर सर्विसिंग न करना</li>
+            <li><strong>गलत फीड मटेरियल</strong> - गलत साइज, गलत प्रकार का पत्थर डालना</li>
+            <li><strong>ओवरलोडिंग (Overloading)</strong> - क्षमता से अधिक लोड डालना</li>
+            <li><strong>खराब लुब्रिकेशन</strong> - गलत ग्रेड का तेल/ग्रीस इस्तेमाल करना</li>
+            <li><strong>घिसे हुए पार्ट्स न बदलना</strong> - समय पर पार्ट्स चेंज न करना</li>
+          </ul>
+        </div>
+
+        <h3><i class="fas fa-list"></i> 
+            <span class="en-text">Main Types of Crushers</span>
+            <span class="hi-text">क्रशर के मुख्य प्रकार</span>
+        </h3>
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-cog"></i>
+            <h4>1. Jaw Crusher</h4>
+          </div>
+          <p class="en-text"><strong>Use:</strong> Primary crushing - from 600mm to 150mm</p>
+          <p class="en-text"><strong>Best For:</strong> Hard rocks - granite, basalt</p>
+          
+          <p class="hi-text"><strong>उपयोग:</strong> प्राइमरी क्रशिंग - 600mm से 150mm तक</p>
+          <p class="hi-text"><strong>सबसे अच्छा है:</strong> सख्त पत्थर के लिए - ग्रेनाइट, बेसाल्ट</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-cogs"></i>
+            <h4>2. Cone Crusher</h4>
+          </div>
+          <p class="en-text"><strong>Use:</strong> Secondary crushing - from 150mm to 20mm</p>
+          <p class="en-text"><strong>Best For:</strong> Better shape output</p>
+
+          <p class="hi-text"><strong>उपयोग:</strong> सेकेंडरी क्रशिंग - 150mm से 20mm तक</p>
+          <p class="hi-text"><strong>सबसे अच्छा है:</strong> बेहतर शेप (Shape) के लिए</p>
+        </div>
+        
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-industry"></i>
+            <h4>3. VSI Crusher (Vertical Shaft Impactor)</h4>
+          </div>
+          <p class="en-text"><strong>Use:</strong> Final crushing - from 20mm to 0-5mm sand</p>
+          <p class="en-text"><strong>Best For:</strong> M-sand, fine aggregates</p>
+
+          <p class="hi-text"><strong>उपयोग:</strong> फाइनल क्रशिंग - 20mm से 0-5mm रेत (Sand) तक</p>
+          <p class="hi-text"><strong>सबसे अच्छा है:</strong> M-Sand, बारीक गिट्टी के लिए</p>
+        </div>
+
+        <div class="card warning">
+          <div class="card-header">
+            <i class="fas fa-star"></i>
+            <h3>
+                <span class="en-text">Golden Rules for Long Life</span>
+                <span class="hi-text">लंबी लाइफ के सुनहरे नियम</span>
+            </h3>
+          </div>
+          <ol class="en-text">
+            <li>Daily inspection - check for cracks, bolts, leaks</li>
+            <li>Proper feeding - balance center and side feed</li>
+            <li>Follow lubrication schedule</li>
+            <li>Replace worn parts on time</li>
+            <li>Provide proper training to operators</li>
+            <li>Maintain maintenance log book</li>
+          </ol>
+          <ol class="hi-text">
+            <li>दैनिक निरीक्षण (Daily Check) - क्रैक, बोल्ट और लीकेज चेक करें</li>
+            <li>सही फीडिंग - बीच में और साइड में बैलेंस करके माल डालें</li>
+            <li>लुब्रिकेशन शेड्यूल का पालन करें</li>
+            <li>घिसे हुए पार्ट्स समय पर बदलें</li>
+            <li>ऑपरेटरों को सही ट्रेनिंग दें</li>
+            <li>रखरखाव लॉग बुक (Maintenance Log Book) बनाएं</li>
+          </ol>
+        </div>
+
+        <div style="text-align: center; margin: 30px 0;">
+          <button class="check-loss-btn" onclick="showSection('roi')">
+            <i class="fas fa-calculator"></i> 
+            <span class="en-text">Check Your Loss!</span>
+            <span class="hi-text">अपना घाटा चेक करें!</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="jaw" class="section">
+        <h2><i class="fas fa-cog"></i> 
+            <span class="en-text">Jaw Crusher - Complete Guide</span>
+            <span class="hi-text">Jaw Crusher - पूरी गाइड</span>
+        </h2>
+
+        <h3><i class="fas fa-exclamation-circle"></i> 
+            <span class="en-text">Common Problems &amp; Solutions</span>
+            <span class="hi-text">आम समस्याएं और समाधान</span>
+        </h3>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-times-circle"></i>
+            <h4>
+                <span class="en-text">Problem 1: Excessive Jaw Plate Wear</span>
+                <span class="hi-text">समस्या 1: Jaw प्लेट का जल्दी घिसना</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Metal parts in feed material</li>
+            <li>Closed Side Setting (CSS) too tight</li>
+            <li>Wrong grade of jaw plate material</li>
+          </ul>
+          <ul class="hi-text">
+            <li>पत्थर के साथ लोहा/मेटल आना</li>
+            <li>CSS सेटिंग बहुत टाइट होना</li>
+            <li>Jaw प्लेट का मटेरियल सही न होना</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Install metal detector on feed</li>
+            <li>Set CSS according to manufacturer guide</li>
+            <li>Use manganese steel jaw plates (18%+)</li>
+            <li>Flip/rotate plates after 200-300 hours</li>
+          </ul>
+          <ul class="hi-text">
+            <li>फीड पर मेटल डिटेक्टर लगाएं</li>
+            <li>CSS कंपनी की गाइड के अनुसार सेट करें</li>
+            <li>मैंगनीज स्टील Jaw प्लेट (18%+) का उपयोग करें</li>
+            <li>200-300 घंटे बाद प्लेटों को घुमाएं/पलटें (Rotate करें)</li>
+          </ul>
+        </div>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-thermometer-full"></i>
+            <h4>
+                <span class="en-text">Problem 2: High Bearing Temperature</span>
+                <span class="hi-text">समस्या 2: बेयरिंग का तापमान बढ़ना</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Insufficient lubrication</li>
+            <li>Wrong grade grease</li>
+            <li>Bearing damage or overloading</li>
+          </ul>
+          <ul class="hi-text">
+            <li>ग्रीस/लुब्रिकेशन की कमी</li>
+            <li>गलत ग्रेड का ग्रीस</li>
+            <li>बेयरिंग खराब होना या ओवरलोडिंग</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Check bearing temperature every 8 hours (normal 50-60°C)</li>
+            <li>Use lithium-based EP2/EP3 grease</li>
+            <li>Avoid over-greasing (only 50-70% fill)</li>
+            <li>If above 80°C, stop machine immediately and check reason</li>
+          </ul>
+          <ul class="hi-text">
+            <li>हर 8 घंटे में तापमान चेक करें (नॉर्मल 50-60°C)</li>
+            <li>लिथियम-बेस्ड EP2/EP3 ग्रीस का उपयोग करें</li>
+            <li>ज्यादा ग्रीस न भरें (केवल 50-70% भरें)</li>
+            <li>यदि 80°C से ऊपर है, तो मशीन तुरंत रोकें और चेक करें</li>
+          </ul>
+        </div>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-vihara"></i>
+            <h4>
+                <span class="en-text">Problem 3: Excessive Vibration</span>
+                <span class="hi-text">समस्या 3: बहुत ज्यादा कंपन (Vibration)</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Uneven feeding (one side heavy load)</li>
+            <li>Loose foundation bolts</li>
+            <li>Flywheel imbalance or bent toggle plate</li>
+          </ul>
+          <ul class="hi-text">
+            <li>असमान फीडिंग (एक तरफ ज्यादा लोड)</li>
+            <li>फाउंडेशन बोल्ट ढीले होना</li>
+            <li>फ्लाईव्हील बैलेंस न होना या टॉगल प्लेट मुड़ी होना</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Maintain uniform feeding</li>
+            <li>Weekly check and tighten foundation bolts</li>
+            <li>Inspect toggle plate, eccentric shaft alignment</li>
+          </ul>
+          <ul class="hi-text">
+            <li>एक समान फीडिंग रखें</li>
+            <li>हर हफ्ते फाउंडेशन बोल्ट चेक और टाइट करें</li>
+            <li>टॉगल प्लेट और शाफ्ट एलाइनमेंट की जांच करें</li>
+          </ul>
+        </div>
+
+        <h3><i class="fas fa-clipboard-list"></i> 
+            <span class="en-text">Daily Maintenance Checklist - Jaw Crusher</span>
+            <span class="hi-text">दैनिक रखरखाव चेकलिस्ट - Jaw Crusher</span>
+        </h3>
+        <div class="card success">
+          <ul class="en-text">
+            <li>Check jaw plates wear</li>
+            <li>Check tightness of all bolts</li>
+            <li>Monitor bearing temperature</li>
+            <li>Check oil level</li>
+            <li>Check V-belt tension</li>
+            <li>Check feed opening blockage</li>
+            <li>Keep discharge area clear</li>
+            <li>Observe for unusual noise</li>
+          </ul>
+          <ul class="hi-text">
+            <li>Jaw प्लेट की घिसावट चेक करें</li>
+            <li>सभी बोल्ट का टाइट होना चेक करें</li>
+            <li>बेयरिंग तापमान पर नज़र रखें</li>
+            <li>ऑयल लेवल चेक करें</li>
+            <li>V-बेल्ट का तनाव (Tension) चेक करें</li>
+            <li>फीड ओपनिंग में कोई रुकावट न हो</li>
+            <li>डिस्चार्ज एरिया (नीचे का हिस्सा) साफ रखें</li>
+            <li>किसी भी अजीब आवाज पर ध्यान दें</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cone" class="section">
+        <h2><i class="fas fa-cogs"></i> 
+            <span class="en-text">Cone Crusher - Complete Guide</span>
+            <span class="hi-text">Cone Crusher - पूरी गाइड</span>
+        </h2>
+
+        <h3><i class="fas fa-exclamation-circle"></i> 
+            <span class="en-text">Common Problems &amp; Solutions</span>
+            <span class="hi-text">आम समस्याएं और समाधान</span>
+        </h3>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-layer-group"></i>
+            <h4>
+                <span class="en-text">Problem 1: Bowl Liner &amp; Mantle Wear</span>
+                <span class="hi-text">समस्या 1: बाउल लाइनर और मेंटल घिसना</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Feed too fine</li>
+            <li>Material type mismatch in crushing chamber</li>
+            <li>Low manganese liner material</li>
+          </ul>
+          <ul class="hi-text">
+            <li>बहुत बारीक माल डालना</li>
+            <li>क्रशिंग चैंबर में गलत मटेरियल डालना</li>
+            <li>लाइनर मटेरियल में कम मैंगनीज होना</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Install screening before feed</li>
+            <li>Use high manganese steel liners (14-18% Mn)</li>
+            <li>Check liner thickness every 500 hours, change at 70% wear</li>
+          </ul>
+          <ul class="hi-text">
+            <li>फीड से पहले स्क्रीनिंग करें (मिट्टी हटाएं)</li>
+            <li>हाई मैंगनीज स्टील लाइनर (14-18%) का उपयोग करें</li>
+            <li>हर 500 घंटे में मोटाई चेक करें, 70% घिसने पर बदल दें</li>
+          </ul>
+        </div>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-oil-can"></i>
+            <h4>
+                <span class="en-text">Problem 2: Oil Contamination</span>
+                <span class="hi-text">समस्या 2: तेल गंदा होना (Oil Contamination)</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Damaged sealing system</li>
+            <li>Water cooling system leak</li>
+            <li>Worn out dust seals</li>
+          </ul>
+          <ul class="hi-text">
+            <li>सीलिंग सिस्टम खराब होना</li>
+            <li>वाटर कूलिंग सिस्टम में लीकेज</li>
+            <li>डस्ट सील घिस जाना</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Test oil sample every 100 hours</li>
+            <li>Clean/change oil filter as per schedule</li>
+            <li>Inspect and replace labyrinth/dust seals</li>
+          </ul>
+          <ul class="hi-text">
+            <li>हर 100 घंटे में तेल का सैंपल टेस्ट करें</li>
+            <li>शेड्यूल के अनुसार ऑयल फिल्टर साफ करें/बदलें</li>
+            <li>डस्ट सील की जांच करें और बदलें</li>
+          </ul>
+        </div>
+        
+        <h3><i class="fas fa-clipboard-list"></i> 
+            <span class="en-text">Daily Maintenance Checklist - Cone Crusher</span>
+            <span class="hi-text">दैनिक रखरखाव चेकलिस्ट - Cone Crusher</span>
+        </h3>
+        <div class="card success">
+          <ul class="en-text">
+            <li>Check oil level & pressure (15-25 PSI)</li>
+            <li>Check bowl liner & mantle condition</li>
+            <li>Note hydraulic pressure reading</li>
+            <li>Check sealing system for leakage</li>
+            <li>Maintain uniform feed distribution</li>
+            <li>Check if discharge size is consistent</li>
+            <li>Check proper cooling water flow</li>
+          </ul>
+          <ul class="hi-text">
+            <li>ऑयल लेवल और प्रेशर चेक करें (15-25 PSI)</li>
+            <li>बाउल लाइनर और मेंटल की स्थिति देखें</li>
+            <li>हाइड्रोलिक प्रेशर रीडिंग नोट करें</li>
+            <li>सीलिंग सिस्टम में लीकेज चेक करें</li>
+            <li>फीड (माल) को एक समान रूप से डालें</li>
+            <li>चेक करें कि माल का साइज सही निकल रहा है या नहीं</li>
+            <li>कूलिंग वाटर का फ्लो सही रखें</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="vsi" class="section">
+        <h2><i class="fas fa-industry"></i> 
+            <span class="en-text">VSI Crusher (Vertical Shaft Impactor) - Complete Guide</span>
+            <span class="hi-text">VSI Crusher - पूरी गाइड</span>
+        </h2>
+
+        <h3><i class="fas fa-exclamation-circle"></i> 
+            <span class="en-text">Common Problems &amp; Solutions</span>
+            <span class="hi-text">आम समस्याएं और समाधान</span>
+        </h3>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-bolt"></i>
+            <h4>
+                <span class="en-text">Problem 1: Fast Rotor Tips Wear</span>
+                <span class="hi-text">समस्या 1: रोटर टिप्स जल्दी घिसना</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Abrasive feed (quartzite, silica)</li>
+            <li>High rotor speed</li>
+            <li>Poor quality tips</li>
+          </ul>
+          <ul class="hi-text">
+            <li>पत्थर बहुत ज्यादा घिसने वाला है (जैसे सिलिका)</li>
+            <li>रोटर की स्पीड बहुत तेज है</li>
+            <li>टिप्स की क्वालिटी खराब है</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Use tungsten carbide rotor tips (3x life)</li>
+            <li>Keep RPM in manufacturer recommended range</li>
+            <li>Inspect tips every 200 hours, rotate corners</li>
+          </ul>
+          <ul class="hi-text">
+            <li>टंगस्टन कार्बाइड रोटर टिप्स का उपयोग करें (3 गुना लाइफ)</li>
+            <li>RPM (स्पीड) को कंपनी की रेंज में रखें</li>
+            <li>हर 200 घंटे में टिप्स चेक करें</li>
+          </ul>
+        </div>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-vial"></i>
+            <h4>
+                <span class="en-text">Problem 2: Poor Sand Quality</span>
+                <span class="hi-text">समस्या 2: रेत (Sand) की खराब क्वालिटी</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Causes:</span><span class="hi-text">कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Wrong feed size (too big/small)</li>
+            <li>Non-optimal rotor speed</li>
+            <li>Incorrect cascade feeding</li>
+          </ul>
+          <ul class="hi-text">
+            <li>गलत फीड साइज (बहुत बड़ा/छोटा)</li>
+            <li>रोटर स्पीड सही न होना</li>
+            <li>कैस्केड फीडिंग गलत होना</li>
+          </ul>
+          <p><strong><span class="en-text">Solutions:</span><span class="hi-text">समाधान:</span></strong></p>
+          <ul class="en-text">
+            <li>Maintain feed size at 40-50mm</li>
+            <li>Keep rotor speed in 1000-1500 RPM range</li>
+            <li>Maintain cascade ratio 70:30 (stone-on-stone : stone-on-anvil)</li>
+            <li>Control fineness with air classifier setting</li>
+          </ul>
+          <ul class="hi-text">
+            <li>फीड साइज 40-50mm रखें</li>
+            <li>रोटर स्पीड 1000-1500 RPM के बीच रखें</li>
+            <li>कैस्केड अनुपात 70:30 बनाए रखें</li>
+            <li>एयर क्लासिफायर सेटिंग से बारीकपन कंट्रोल करें</li>
+          </ul>
+        </div>
+
+        <h3><i class="fas fa-clipboard-list"></i> 
+            <span class="en-text">Daily Maintenance Checklist - VSI Crusher</span>
+            <span class="hi-text">दैनिक रखरखाव चेकलिस्ट - VSI Crusher</span>
+        </h3>
+        <div class="card success">
+          <ul class="en-text">
+            <li>Inspect rotor tips condition</li>
+            <li>Monitor bearing vibration (5-8 mm/s)</li>
+            <li>Check lubrication oil level & temperature</li>
+            <li>Check anvil ring wear</li>
+            <li>Check feed distributor plate condition</li>
+            <li>Check discharge sand fineness</li>
+            <li>Ensure proper drive belt tension</li>
+            <li>Check dust collection system function</li>
+          </ul>
+          <ul class="hi-text">
+            <li>रोटर टिप्स की स्थिति जांचें</li>
+            <li>बेयरिंग वाइब्रेशन मॉनिटर करें (5-8 mm/s)</li>
+            <li>लुब्रिकेशन तेल का लेवल और तापमान चेक करें</li>
+            <li>एनविल रिंग की घिसावट चेक करें</li>
+            <li>फीड डिस्ट्रीब्यूटर प्लेट की स्थिति जांचें</li>
+            <li>रेत (Sand) की क्वालिटी चेक करें</li>
+            <li>ड्राइव बेल्ट का तनाव (Tension) सही रखें</li>
+            <li>धूल जमा करने वाले सिस्टम (Dust collector) को चेक करें</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="maintenance" class="section">
+        <h2><i class="fas fa-tools"></i> 
+            <span class="en-text">Complete Maintenance Schedule - Crushers</span>
+            <span class="hi-text">कम्प्लीट मेंटेनेंस शेड्यूल - क्रशर्स</span>
+        </h2>
+
+        <h3><i class="fas fa-calendar-day"></i> 
+            <span class="en-text">Daily Maintenance - 30 minutes</span>
+            <span class="hi-text">दैनिक रखरखाव - 30 मिनट</span>
+        </h3>
+        <table>
+          <thead>
+            <tr>
+                <th><span class="en-text">Task</span><span class="hi-text">कार्य</span></th>
+                <th><span class="en-text">Details</span><span class="hi-text">विवरण</span></th>
+            </tr>
+          </thead>
+          <tbody class="en-text">
+              <tr><td>Visual Inspection</td><td>Check for cracks, wear, loose bolts</td></tr>
+              <tr><td>Lubrication Check</td><td>Check oil/grease levels, leakage</td></tr>
+              <tr><td>Temperature Monitoring</td><td>Note bearings, motor temperature</td></tr>
+              <tr><td>Sound Test</td><td>Check for unusual noise</td></tr>
+              <tr><td>Vibration Check</td><td>Check for excessive vibration</td></tr>
+          </tbody>
+          <tbody class="hi-text">
+              <tr><td>विजुअल इंस्पेक्शन</td><td>क्रैक, घिसावट, ढीले बोल्ट चेक करें</td></tr>
+              <tr><td>लुब्रिकेशन चेक</td><td>तेल/ग्रीस का लेवल और लीकेज देखें</td></tr>
+              <tr><td>तापमान मॉनिटरिंग</td><td>बेयरिंग और मोटर का तापमान नोट करें</td></tr>
+              <tr><td>साउंड टेस्ट</td><td>अजीब आवाज के लिए सुनें</td></tr>
+              <tr><td>वाइब्रेशन चेक</td><td>ज्यादा कंपन के लिए चेक करें</td></tr>
+          </tbody>
+        </table>
+
+        <h3><i class="fas fa-calendar-week"></i> 
+            <span class="en-text">Weekly Maintenance - 2 hours</span>
+            <span class="hi-text">साप्ताहिक रखरखाव - 2 घंटे</span>
+        </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="en-text">Task</span><span class="hi-text">कार्य</span></th>
+                    <th><span class="en-text">Details</span><span class="hi-text">विवरण</span></th>
+                </tr>
+            </thead>
+            <tbody class="en-text">
+                <tr><td>Bolts Tightening</td><td>Tighten foundation & mounting bolts</td></tr>
+                <tr><td>Belt Inspection</td><td>Check V-belts wear & tension</td></tr>
+                <tr><td>Grease Application</td><td>Apply fresh grease to all grease points</td></tr>
+                <tr><td>Filter Cleaning</td><td>Clean air filters, oil filters</td></tr>
+                <tr><td>Wear Parts Check</td><td>Measure jaw plates, liners thickness</td></tr>
+            </tbody>
+            <tbody class="hi-text">
+                <tr><td>बोल्ट टाइट करना</td><td>फाउंडेशन और माउंटिंग बोल्ट टाइट करें</td></tr>
+                <tr><td>बेल्ट निरीक्षण</td><td>V-बेल्ट की घिसावट और तनाव चेक करें</td></tr>
+                <tr><td>ग्रीस लगाना</td><td>सभी ग्रीस पॉइंट्स पर ताज़ा ग्रीस लगाएं</td></tr>
+                <tr><td>फिल्टर सफाई</td><td>एयर फिल्टर और ऑयल फिल्टर साफ करें</td></tr>
+                <tr><td>पार्ट्स चेक</td><td>Jaw प्लेट्स और लाइनर की मोटाई मापें</td></tr>
+            </tbody>
+        </table>
+
+        <h3><i class="fas fa-calendar-alt"></i> 
+            <span class="en-text">Monthly Maintenance - 4-6 hours</span>
+            <span class="hi-text">मासिक रखरखाव - 4-6 घंटे</span>
+        </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th><span class="en-text">Task</span><span class="hi-text">कार्य</span></th>
+                    <th><span class="en-text">Details</span><span class="hi-text">विवरण</span></th>
+                </tr>
+            </thead>
+            <tbody class="en-text">
+                <tr><td>Deep Cleaning</td><td>Complete cleaning of machine</td></tr>
+                <tr><td>Oil Analysis</td><td>Test lubrication oil sample</td></tr>
+                <tr><td>Alignment Check</td><td>Verify motor-crusher alignment</td></tr>
+                <tr><td>Electrical Inspection</td><td>Check wiring, connections, contactors</td></tr>
+                <tr><td>Safety Devices Test</td><td>Test emergency stop, guards, interlocks</td></tr>
+            </tbody>
+            <tbody class="hi-text">
+                <tr><td>डीप क्लीनिंग</td><td>मशीन की पूरी सफाई करें</td></tr>
+                <tr><td>तेल जांच</td><td>लुब्रिकेशन तेल का सैंपल टेस्ट कराएं</td></tr>
+                <tr><td>एलाइनमेंट चेक</td><td>मोटर और क्रशर का एलाइनमेंट चेक करें</td></tr>
+                <tr><td>इलेक्ट्रिकल जांच</td><td>वायरिंग, कनेक्शन और कॉन्टैक्टर्स चेक करें</td></tr>
+                <tr><td>सुरक्षा जांच</td><td>इमरजेंसी स्टॉप और गार्ड्स चेक करें</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="card warning">
+          <div class="card-header">
+            <i class="fas fa-lightbulb"></i>
+            <h3>
+                <span class="en-text">Important Tips for Maintenance</span>
+                <span class="hi-text">रखरखाव के लिए महत्वपूर्ण सुझाव</span>
+            </h3>
+          </div>
+          <ul class="en-text">
+            <li><strong>Maintenance Log:</strong> Record of every activity - date, time, person, parts</li>
+            <li><strong>Spare Parts Stock:</strong> Keep critical spares ready - jaw plates, bearings, belts</li>
+            <li><strong>Trained Staff:</strong> At least 2 people trained in maintenance</li>
+            <li><strong>Tools &amp; Equipment:</strong> Keep torque wrench, bearing puller, grease gun ready</li>
+            <li><strong>Shutdown Planning:</strong> Plan downtime for maintenance</li>
+          </ul>
+          <ul class="hi-text">
+            <li><strong>मेंटेनेंस लॉग:</strong> हर काम का रिकॉर्ड रखें - तारीख, समय, व्यक्ति, पार्ट्स</li>
+            <li><strong>स्पेयर पार्ट्स स्टॉक:</strong> जरूरी स्पेयर तैयार रखें - Jaw प्लेट, बेयरिंग, बेल्ट</li>
+            <li><strong>ट्रेनिंग:</strong> कम से कम 2 लोगों को मेंटेनेंस की ट्रेनिंग दें</li>
+            <li><strong>औजार (Tools):</strong> टॉर्क रिंच, बेयरिंग पुलर, ग्रीस गन तैयार रखें</li>
+            <li><strong>शटडाउन प्लानिंग:</strong> मेंटेनेंस के लिए समय पहले से प्लान करें</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="troubleshoot" class="section">
+        <h2><i class="fas fa-wrench"></i> 
+            <span class="en-text">Troubleshooting Guide</span>
+            <span class="hi-text">समस्या निवारण (Troubleshooting) गाइड</span>
+        </h2>
+
+        <h3><i class="fas fa-exclamation-triangle"></i> 
+            <span class="en-text">Emergency Problems - Stop Machine Immediately</span>
+            <span class="hi-text">आपातकालीन समस्याएं - मशीन तुरंत रोकें</span>
+        </h3>
+
+        <div class="card danger">
+          <div class="card-header">
+            <i class="fas fa-volume-up"></i>
+            <h4>
+                <span class="en-text">1. Loud Metallic Noise</span>
+                <span class="hi-text">1. बहुत तेज धातु (Metal) की आवाज</span>
+            </h4>
+          </div>
+          <p><strong><span class="en-text">Possible Causes:</span><span class="hi-text">संभावित कारण:</span></strong></p>
+          <ul class="en-text">
+            <li>Bearing damage</li>
+            <li>Loose flywheel</li>
+            <li>Metal parts in feed</li>
+          </ul>
+          <ul class="hi-text">
+            <li>बेयरिंग खराब होना</li>
+            <li>फ्लाईव्हील ढीला होना</li>
+            <li>फीड में लोहा आ जाना</li>
+          </ul>
+          <p><strong><span class="en-text">Immediate Action:</span><span class="hi-text">तुरंत क्या करें:</span></strong></p>
+          <ol class="en-text">
+            <li>Stop machine immediately</li>
+            <li>Remove metal from crushing chamber</li>
+            <li>Manually feel bearings for roughness</li>
+            <li>Tighten flywheel bolts</li>
+          </ol>
+          <ol class="hi-text">
+            <li>मशीन तुरंत रोकें</li>
+            <li>क्रशिंग चैंबर से लोहा निकालें</li>
+            <li>बेयरिंग को हाथ से चेक करें</li>
+            <li>फ्लाईव्हील बोल्ट टाइट करें</li>
+          </ol>
+        </div>
+
+        <div class="card danger">
+            <div class="card-header">
+              <i class="fas fa-vihara"></i>
+              <h4>
+                  <span class="en-text">2. Excessive Vibration</span>
+                  <span class="hi-text">2. बहुत ज्यादा कंपन (Vibration)</span>
+              </h4>
+            </div>
+            <p><strong><span class="en-text">Possible Causes:</span><span class="hi-text">संभावित कारण:</span></strong></p>
+            <ul class="en-text">
+                <li>Loose foundation bolts</li>
+                <li>Unbalanced rotor</li>
+                <li>Broken toggle plate</li>
+            </ul>
+            <ul class="hi-text">
+                <li>फाउंडेशन बोल्ट ढीले होना</li>
+                <li>रोटर का बैलेंस न होना</li>
+                <li>टॉगल प्लेट टूटी होना</li>
+            </ul>
+        </div>
+
+        <h3><i class="fas fa-cogs"></i> 
+            <span class="en-text">Common Problems - Regular Operation</span>
+            <span class="hi-text">आम समस्याएं - रेगुलर ऑपरेशन</span>
+        </h3>
+        <table>
+          <thead>
+            <tr>
+                <th><span class="en-text">Problem</span><span class="hi-text">समस्या</span></th>
+                <th><span class="en-text">Cause</span><span class="hi-text">कारण</span></th>
+                <th><span class="en-text">Solution</span><span class="hi-text">समाधान</span></th>
+            </tr>
+          </thead>
+          <tbody class="en-text">
+            <tr><td>Low Production</td><td>Large feed size, tight CSS</td><td>Reduce feed size, adjust CSS</td></tr>
+            <tr><td>Uneven Product Size</td><td>Worn jaw plates, irregular feed</td><td>Replace jaw plates, uniform feed</td></tr>
+            <tr><td>Frequent Belt Breaking</td><td>Wrong tension, pulley misalignment</td><td>Set proper tension, check alignment</td></tr>
+            <tr><td>Oil Leakage</td><td>Damaged seals, over-filling</td><td>Replace seals, correct level</td></tr>
+            <tr><td>Motor Overheating</td><td>Overloading, poor ventilation</td><td>Reduce load, clean motor fan</td></tr>
+          </tbody>
+          <tbody class="hi-text">
+            <tr><td>कम उत्पादन</td><td>बड़ा फीड साइज, टाइट CSS</td><td>फीड साइज कम करें, CSS एडजस्ट करें</td></tr>
+            <tr><td>असमान माल साइज</td><td>घिसी हुई प्लेटें, अनियमित फीड</td><td>प्लेटें बदलें, फीड एक समान रखें</td></tr>
+            <tr><td>बेल्ट बार-बार टूटना</td><td>गलत तनाव, पुली एलाइनमेंट</td><td>तनाव सही करें, एलाइनमेंट चेक करें</td></tr>
+            <tr><td>तेल लीकेज</td><td>खराब सील, ज्यादा भरना</td><td>सील बदलें, लेवल सही करें</td></tr>
+            <tr><td>मोटर गर्म होना</td><td>ओवरलोडिंग, खराब हवा</td><td>लोड कम करें, मोटर पंखा साफ करें</td></tr>
+          </tbody>
+        </table>
+
+        <div class="card warning">
+          <div class="card-header">
+            <i class="fas fa-user-hard-hat"></i>
+            <h3>
+                <span class="en-text">When to Call Expert Engineer</span>
+                <span class="hi-text">एक्सपर्ट इंजीनियर को कब बुलाएं</span>
+            </h3>
+          </div>
+          <ul class="en-text">
+            <li>Main shaft related problem</li>
+            <li>Bearing fails repeatedly (2-3 times per year)</li>
+            <li>Major cracks in foundation</li>
+            <li>Hydraulic system repeat problem</li>
+            <li>Production drops more than 30%</li>
+          </ul>
+          <ul class="hi-text">
+            <li>मेन शाफ्ट से जुड़ी समस्या</li>
+            <li>बेयरिंग बार-बार फेल हो रहा हो (साल में 2-3 बार)</li>
+            <li>फाउंडेशन में बड़ी दरारें हों</li>
+            <li>हाइड्रोलिक सिस्टम में बार-बार दिक्कत आए</li>
+            <li>उत्पादन 30% से ज्यादा गिर जाए</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="roi" class="section">
+        <h2><i class="fas fa-calculator"></i> 
+            <span class="en-text">ROI Calculator - Financial Impact Analysis</span>
+            <span class="hi-text">मुनाफा कैलकुलेटर - वित्तीय प्रभाव विश्लेषण</span>
+        </h2>
+
+        <div class="card success">
+          <div class="card-header">
+            <i class="fas fa-info-circle"></i>
+            <h3><span class="en-text">Important Note</span><span class="hi-text">महत्वपूर्ण नोट</span></h3>
+          </div>
+          <p>
+              <span class="en-text">This calculator will show you how much financial loss occurs due to plant breakdown.</span>
+              <span class="hi-text">यह कैलकुलेटर आपको दिखाएगा कि प्लांट खराब होने पर कितना वित्तीय नुकसान होता है।</span>
+          </p>
+        </div>
+
+        <div class="roi-calculator">
+          <h3 style="text-align: center; color: var(--secondary); margin-bottom: 25px;">
+              <span class="en-text">Plant Details</span>
+              <span class="hi-text">प्लांट का विवरण</span>
+          </h3>
+
+          <div class="calculator-inputs">
+            <div class="input-group">
+              <label for="capacity"><span class="en-text">Daily Plant Capacity (TPH)</span><span class="hi-text">दैनिक प्लांट क्षमता (TPH)</span></label>
+              <input type="number" id="capacity" value="250" min="1" onchange="calculateROI()" oninput="calculateROI()">
+            </div>
+
+            <div class="input-group">
+              <label for="costPerTon"><span class="en-text">Cost per Ton (₹)</span><span class="hi-text">प्रति टन कीमत (₹)</span></label>
+              <input type="number" id="costPerTon" value="500" min="1" onchange="calculateROI()" oninput="calculateROI()">
+            </div>
+          </div>
+
+          <h3 style="text-align: center; color: var(--primary); margin-top: 30px; margin-bottom: 20px;">
+              <span class="en-text">Downtime Loss Calculator</span>
+              <span class="hi-text">ब्रेकडाउन लॉस कैलकुलेटर</span>
+          </h3>
+
+          <div class="calculator-results">
+            <div class="result-card">
+              <h4><span class="en-text">1 Hour Downtime</span><span class="hi-text">1 घंटा बंद रहने पर</span></h4>
+              <div class="amount" id="loss1hour">1,25,000</div>
+              <div class="hours"><span class="en-text">1 Hour Loss</span><span class="hi-text">1 घंटे का नुकसान</span></div>
+            </div>
+
+            <div class="result-card severe">
+              <h4><span class="en-text">10 Hours Downtime</span><span class="hi-text">10 घंटे बंद रहने पर</span></h4>
+              <div class="amount" id="loss10hour">12,50,000</div>
+              <div class="hours"><span class="en-text">Full Day Loss</span><span class="hi-text">पूरे दिन का नुकसान</span></div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin: 30px 0;">
+            <a href="#" id="roiWhatsappBtn" class="whatsapp-roi-btn" onclick="sendROIWhatsApp(event)">
+              <i class="fab fa-whatsapp"></i> 
+              <span class="en-text">Send ROI Report via WhatsApp</span>
+              <span class="hi-text">WhatsApp पर रिपोर्ट भेजें</span>
+            </a>
+          </div>
+
+          <div class="card warning">
+            <div class="card-header">
+              <i class="fas fa-exclamation-triangle"></i>
+              <h4>Important:</h4>
+            </div>
+            <ul class="en-text">
+              <li><strong>Loss is not just production</strong> – includes labor, diesel, electricity, overhead</li>
+              <li><strong>Actual loss is 1.5-2x higher</strong> – if orders are pending</li>
+              <li><strong>Repeated breakdowns cause reputation loss</strong> – customers go to other suppliers</li>
+            </ul>
+            <ul class="hi-text">
+              <li><strong>नुकसान केवल उत्पादन का नहीं है</strong> – इसमें लेबर, डीजल, बिजली, ऊपरी खर्च शामिल हैं</li>
+              <li><strong>वास्तविक नुकसान 1.5-2 गुना अधिक होता है</strong> – यदि ऑर्डर पेंडिंग हैं</li>
+              <li><strong>बार-बार खराब होने से प्रतिष्ठा का नुकसान होता है</strong> – ग्राहक दूसरे सप्लायर के पास चले जाते हैं</li>
+            </ul>
+          </div>
+
+          <div class="card success" style="margin-top: 20px;">
+            <div class="card-header">
+              <i class="fas fa-shield-alt"></i>
+              <h3>
+                  <span class="en-text">Return on Preventive Maintenance</span>
+                  <span class="hi-text">निवारक रखरखाव (Preventive Maintenance) का फायदा</span>
+              </h3>
+            </div>
+            <p style="font-size: 1.1em;" class="en-text">Regular maintenance can reduce breakdowns by 50-70%.</p>
+            <p style="font-size: 1.1em;" class="hi-text">नियमित रखरखाव ब्रेकडाउन को 50-70% तक कम कर सकता है।</p>
+            <ul class="en-text">
+              <li><strong>Daily 30 minutes</strong> inspection avoids major breakdown</li>
+              <li><strong>₹50,000 - ₹1,00,000</strong> quarterly maintenance, but saves lakhs in loss</li>
+              <li><strong>Spare parts stock</strong> reduces downtime from hours to minutes</li>
+            </ul>
+            <ul class="hi-text">
+              <li><strong>रोजाना 30 मिनट</strong> की जांच बड़े ब्रेकडाउन से बचाती है</li>
+              <li><strong>₹50,000 - ₹1,00,000</strong> का त्रैमासिक रखरखाव लाखों का नुकसान बचाता है</li>
+              <li><strong>स्पेयर पार्ट्स स्टॉक</strong> रखने से घंटों का काम मिनटों में हो जाता है</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2><i class="fas fa-address-book"></i> 
+            <span class="en-text">Contact Us - Crusher Enquiry Form</span>
+            <span class="hi-text">संपर्क करें - क्रशर पूछताछ फॉर्म</span>
+        </h2>
+        <div class="card success" style="max-width: 800px; margin: 0 auto;">
+          <form id="contactForm" onsubmit="submitEnquiry(event)">
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="firmName">
+                  <span class="en-text">Firm/Company Name *</span>
+                  <span class="hi-text">फर्म/कंपनी का नाम *</span>
+              </label>
+              <input type="text" id="firmName" required placeholder="Your company name">
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="clientName">
+                  <span class="en-text">Client Name *</span>
+                  <span class="hi-text">क्लाइंट का नाम *</span>
+              </label>
+              <input type="text" id="clientName" required placeholder="Your name">
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="mobile">
+                  <span class="en-text">Mobile Number *</span>
+                  <span class="hi-text">मोबाइल नंबर *</span>
+              </label>
+              <input type="tel" id="mobile" required placeholder="+91 9XXXXXXXXX">
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="location">
+                  <span class="en-text">Plant Location *</span>
+                  <span class="hi-text">प्लांट की जगह (लोकेशन) *</span>
+              </label>
+              <input type="text" id="location" required placeholder="District, State (e.g. Alwar, Rajasthan)">
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="crusherCompany">
+                  <span class="en-text">Which company's Crusher is installed in your plant? *</span>
+                  <span class="hi-text">आपके प्लांट में किस कंपनी का क्रशर लगा है? *</span>
+              </label>
+              <select id="crusherCompany" required>
+                <option value="">Select Crusher Brand</option>
+                <option value="Metso">Metso</option>
+                <option value="Sandvik">Sandvik</option>
+                <option value="Terex">Terex</option>
+                <option value="Powerscreen">Powerscreen</option>
+                <option value="McCloskey">McCloskey</option>
+                <option value="Others">Others (Please specify)</option>
+              </select>
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="crusherType">
+                  <span class="en-text">Crusher Type</span>
+                  <span class="hi-text">क्रशर का प्रकार</span>
+              </label>
+              <select id="crusherType">
+                <option value="">Select Type</option>
+                <option value="Jaw Crusher">Jaw Crusher</option>
+                <option value="Cone Crusher">Cone Crusher</option>
+                <option value="VSI Crusher">VSI Crusher</option>
+              </select>
+            </div>
+
+            <div class="input-group" style="margin-bottom: 20px;">
+              <label for="problem">
+                  <span class="en-text">Main Problem Description</span>
+                  <span class="hi-text">मुख्य समस्या का विवरण</span>
+              </label>
+              <textarea id="problem" rows="4" placeholder="What problem are you facing?" style="width: 100%; padding: 12px; font-size: 1.1em; border: 2px solid var(--secondary); border-radius: 8px;"></textarea>
+            </div>
+
+            <button type="submit" class="whatsapp-roi-btn" style="width: 100%; margin-top: 20px;">
+              <i class="fab fa-whatsapp"></i> 
+              <span class="en-text">Send Enquiry via WhatsApp</span>
+              <span class="hi-text">WhatsApp के जरिए पूछताछ भेजें</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <div class="card-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3><span class="en-text">Our Service Areas</span><span class="hi-text">हमारे सर्विस क्षेत्र</span></h3>
+          </div>
+          <p class="en-text">We provide crusher maintenance services across India with special focus on:</p>
+          <p class="hi-text">हम पूरे भारत में क्रशर रखरखाव सेवाएं प्रदान करते हैं, विशेष रूप से:</p>
+          <ul class="en-text">
+            <li><strong>North India:</strong> Rajasthan, Uttar Pradesh, Haryana, Punjab, Delhi</li>
+            <li><strong>Central India:</strong> Madhya Pradesh, Chhattisgarh</li>
+            <li><strong>West India:</strong> Gujarat, Maharashtra</li>
+            <li><strong>South India:</strong> Karnataka, Tamil Nadu, Andhra Pradesh, Telangana</li>
+          </ul>
+          <ul class="hi-text">
+            <li><strong>उत्तर भारत:</strong> राजस्थान, उत्तर प्रदेश, हरियाणा, पंजाब, दिल्ली</li>
+            <li><strong>मध्य भारत:</strong> मध्य प्रदेश, छत्तीसगढ़</li>
+            <li><strong>पश्चिम भारत:</strong> गुजरात, महाराष्ट्र</li>
+            <li><strong>दक्षिण भारत:</strong> कर्नाटक, तमिलनाडु, आंध्र प्रदेश, तेलंगाना</li>
+          </ul>
+        </div>
+      </section>
+
+      <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> 
+        <span class="en-text">Print Complete Guide</span>
+        <span class="hi-text">पूरी गाइड प्रिंट करें</span>
+      </button>
+    </main>
+
+    <footer class="footer">
+      <h3>RAKANTHAM CRUSHER SOLUTION</h3>
+      <p>
+          <span class="en-text">ENGINEERED FOR PERFORMANCE</span>
+          <span class="hi-text">बेहतरीन परफॉरमेंस के लिए निर्मित</span>
+      </p>
+      
+      <div class="footer-links">
+        <a href="mailto:rakanthamcrushersolutions@gmail.com" class="footer-link">
+          <i class="fas fa-envelope"></i> rakanthamcrushersolutions@gmail.com
+        </a>
+        <a href="tel:+918923880893" class="footer-link">
+          <i class="fas fa-phone"></i> +91 89238 80893
+        </a>
+        <a href="https://wa.me/918923880893" target="_blank" class="footer-link">
+          <i class="fab fa-whatsapp"></i> +91 89238 80893
+        </a>
+      </div>
+      
+      <div class="footer-details">
+        <div class="footer-detail">
+          <i class="fas fa-file-invoice"></i> <strong>GST:</strong> 06FTFPS5696B1ZA
+        </div>
+        <div class="footer-detail">
+          <i class="fas fa-map-marker-alt"></i> <strong><span class="en-text">Address:</span><span class="hi-text">पता:</span></strong> Unit No. 260 LNT Co-Working Solution, Govt. College Road, Sector 16A, Faridabad, HR 121006
+        </div>
+      </div>
+      
+      <p><span class="en-text">For service and support, contact us anytime</span><span class="hi-text">सर्विस और सपोर्ट के लिए कभी भी संपर्क करें</span></p>
+      <p style="font-size: 0.9em; opacity: 0.8;">
+        © 2025 RAKANTHAM CRUSHER SOLUTION. All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+  <div class="fab-container">
+    <a href="https://wa.me/918923880893?text=Hello%2C%20I%20need%20help%20with%20my%20crusher%20maintenance.%20Please%20assist%20me."
+       target="_blank"
+       class="fab fab-whatsapp"
+       title="WhatsApp Us">
+      <i class="fab fa-whatsapp fa-lg"></i>
+    </a>
+    <button class="fab fab-primary" onclick="scrollToTop()" title="Scroll to Top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script>
+    function toggleLanguage() {
+      const isChecked = document.getElementById('langToggle').checked;
+      if(isChecked) {
+        document.body.classList.add('hindi-mode');
+      } else {
+        document.body.classList.remove('hindi-mode');
+      }
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      const buttons = document.querySelectorAll('.nav-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(sectionId).classList.add('active');
+      
+      // Update active nav button
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => {
+        // Simple logic to find button by onclick attribute content
+        if(btn.getAttribute('onclick').includes(sectionId)) {
+           btn.classList.add('active');
+        }
+      });
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function calculateROI() {
+      const capacity = parseFloat(document.getElementById('capacity').value) || 250;
+      const costPerTon = parseFloat(document.getElementById('costPerTon').value) || 500;
+
+      const loss1hour = capacity * costPerTon * 1;
+      const loss10hour = capacity * costPerTon * 10;
+
+      document.getElementById('loss1hour').textContent =
+        loss1hour.toLocaleString('en-IN');
+      document.getElementById('loss10hour').textContent =
+        loss10hour.toLocaleString('en-IN');
+    }
+
+    function sendROIWhatsApp(event) {
+      event.preventDefault();
+
+      const capacity = parseFloat(document.getElementById('capacity').value) || 250;
+      const costPerTon = parseFloat(document.getElementById('costPerTon').value) || 500;
+
+      const loss1hour = capacity * costPerTon * 1;
+      const loss10hour = capacity * costPerTon * 10;
+
+      const message =
+        '🔧 *Crusher ROI Report*%0A%0A' +
+        'Plant Capacity: ' + capacity + ' TPH%0A' +
+        'Cost per Ton: ₹' + costPerTon + '%0A%0A' +
+        '1 hour downtime loss: ₹' + loss1hour.toLocaleString('en-IN') + '%0A' +
+        '10 hours downtime loss: ₹' + loss10hour.toLocaleString('en-IN') + '%0A%0A' +
+        'Need detailed preventive maintenance solution from Rakantham Crusher Solutions.';
+
+      const whatsappUrl = 'https://wa.me/918923880893?text=' + message;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    function submitEnquiry(event) {
+      event.preventDefault();
+
+      const formData = {
+        firmName: document.getElementById('firmName').value,
+        clientName: document.getElementById('clientName').value,
+        mobile: document.getElementById('mobile').value,
+        location: document.getElementById('location').value,
+        crusherCompany: document.getElementById('crusherCompany').value,
+        crusherType: document.getElementById('crusherType').value || 'Not specified',
+        problem: document.getElementById('problem').value || 'Not specified'
+      };
+
+      const message =
+        '🔧 *CRUSHER ENQUIRY FORM*%0A%0A' +
+        '🏢 *Firm Name:* ' + encodeURIComponent(formData.firmName) + '%0A' +
+        '👤 *Client:* ' + encodeURIComponent(formData.clientName) + '%0A' +
+        '📱 *Mobile:* ' + encodeURIComponent(formData.mobile) + '%0A' +
+        '📍 *Location:* ' + encodeURIComponent(formData.location) + '%0A' +
+        '🏭 *Crusher Brand:* ' + encodeURIComponent(formData.crusherCompany) + '%0A' +
+        '⚙️ *Crusher Type:* ' + encodeURIComponent(formData.crusherType) + '%0A' +
+        '🔧 *Problem:* ' + encodeURIComponent(formData.problem) + '%0A%0A' +
+        'Need maintenance help from Rakantham Crusher Solutions.';
+
+      const whatsappUrl = 'https://wa.me/918923880893?text=' + message;
+      window.open(whatsappUrl, '_blank');
+
+      document.getElementById('contactForm').reset();
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Initial ROI calculation
+    calculateROI();
+  </script>
+</body>
+</html>
